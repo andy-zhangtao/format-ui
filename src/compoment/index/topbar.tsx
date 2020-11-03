@@ -8,7 +8,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import { LinearProgress, Grid, Paper } from '@material-ui/core';
+import { LinearProgress, Grid, Button } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 
 const drawerWidth = 240;
@@ -84,14 +84,6 @@ const PersistentDrawerLeft = (props: any) => {
         setOpen(true);
     };
 
-    const handleDrawerClose = () => {
-        setOpen(false);
-    };
-
-    let u = Math.ceil(Math.random() * 100000)
-
-    let avatat = "https://avatars1.githubusercontent.com/u/".concat(String(u))
-
     return (
         <div className={classes.root}>
             <div className="content">
@@ -144,6 +136,9 @@ const PersistentDrawerLeft = (props: any) => {
                                 variant="outlined"
                                 fullWidth
                             />
+                            <Button variant="outlined" color="inherit" >
+                                FORMAT
+                            </Button>
                         </Grid>
                     </Grid>
                 </div>
