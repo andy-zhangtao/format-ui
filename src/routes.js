@@ -6,16 +6,9 @@ const routes = [
   {
     path: '/',
     exact: true,
-    component: () => <Redirect to="/dashboard" />
-  },
-  {
-    route: '*',
+    strict: true,
     component: Index,
-    routes: [
-
-    ]
   },
-
 ];
 
 export default routes;

@@ -5,6 +5,7 @@ import { withRouter, } from 'react-router-dom';
 import { History, LocationState } from 'history'
 import { RouteConfig } from 'react-router-config'
 import TopBar from './topbar';
+import FootBarComponent from '../footbar';
 
 interface IndexPros {
     history: History<LocationState>
@@ -20,7 +21,11 @@ class Index extends Component<IndexPros, {}>{
         const { route } = this.props
 
         return (
-            <TopBar route={route} />
+            <div>
+                <TopBar route={route} />
+                <FootBarComponent />
+            </div>
+
         )
     }
 }

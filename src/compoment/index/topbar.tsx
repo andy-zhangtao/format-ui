@@ -8,8 +8,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import { LinearProgress, Grid, Button } from '@material-ui/core';
-import TextField from '@material-ui/core/TextField';
+import { LinearProgress } from '@material-ui/core';
+import FormatClass from '../format';
 
 const drawerWidth = 240;
 
@@ -118,30 +118,7 @@ const PersistentDrawerLeft = (props: any) => {
                         {renderRoutes(route.routes)}
                     </Suspense>
                 </main>
-                <div style={{ padding: 2, textAlign: 'center', color: theme.palette.text.secondary }}>
-                    <Grid
-                        container
-                        direction="row"
-                        justify="center"
-                        alignItems="center"
-                    >
-                        <Grid item xs={8}>
-                            <TextField
-                                id="outlined-multiline-flexible"
-                                label="Nginx Conf"
-                                multiline
-                                rowsMax="100"
-                                margin="normal"
-                                helperText="输入nginx配置文件"
-                                variant="outlined"
-                                fullWidth
-                            />
-                            <Button variant="outlined" color="inherit" >
-                                FORMAT
-                            </Button>
-                        </Grid>
-                    </Grid>
-                </div>
+                <FormatClass />
             </main>
         </div>
     );
