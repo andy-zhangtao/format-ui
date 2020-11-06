@@ -15,3 +15,10 @@ install:
   - echo $REACT_APP_SRV_ADDR
   - yarn install
   - CI=false yarn build
+
+script:
+  - echo "no need for unit test"
+
+after_success:
+  - tcb hosting delete cloudPath -e $envid
+  - tcb hosting deploy build -e $envid
