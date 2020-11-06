@@ -13,4 +13,4 @@ before_install:
 install:
   - echo $REACT_APP_SRV_ADDR
   - yarn install
-  - yarn build
+  - CI=false yarn build
