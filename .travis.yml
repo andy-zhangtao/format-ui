@@ -14,7 +14,7 @@ before_install:
 install:
   - echo $REACT_APP_SRV_ADDR
   - yarn install
-  - CI=false yarn build
+  - REACT_APP_BUILD=`date +"%Y-%m-%d %H:%M.%S %Z"` CI=false yarn build
 
 script:
   - echo "no need for unit test"
