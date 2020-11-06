@@ -1,5 +1,3 @@
-import React from 'react';
-import { Redirect } from 'react-router-dom';
 import Index from './compoment/index'
 
 const routes = [

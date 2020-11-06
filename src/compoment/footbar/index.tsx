@@ -1,19 +1,21 @@
 import React, { Component } from 'react'
 import { BottomNavigation, BottomNavigationAction } from '@material-ui/core'
-import RestoreIcon from '@material-ui/icons/Restore';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 class FootBarComponent extends Component {
 
+    state = {
+        value: "",
+    }
+    onChange = (event: React.ChangeEvent<{}>, newValue: string) => {
+        this.setState({ value: newValue })
+    }
     render() {
         return (
-            <BottomNavigation
-                showLabels
-            >
-                <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-                <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-                <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+            <BottomNavigation value={this.state.value} onChange={this.onChange}>
+                <BottomNavigationAction target="_blank" href="mailto:ztao8607@gmail.com" value="ztao8607@gmail.com" label="ztao8607@gmail.com" icon={<MailOutlineIcon />} />
+                <BottomNavigationAction target="_blank" href="https://github.com/andy-zhangtao/format-ui" value="GitHub" label="GitHub" icon={<GitHubIcon />} />
             </BottomNavigation>
 
         )

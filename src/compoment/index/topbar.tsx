@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { renderRoutes } from 'react-router-config';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { makeStyles, useTheme, Theme, createStyles } from '@material-ui/core/styles';
+import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const PersistentDrawerLeft = (props: any) => {
     const classes = useStyles();
-    const theme = useTheme();
+    // const theme = useTheme();
     const [open, setOpen] = React.useState(true);
     const { route } = props;
 
