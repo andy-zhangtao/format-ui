@@ -8,7 +8,8 @@ before_install:
   - export PATH="$HOME/.yarn/bin:$PATH"
   - yarn -v
   - yarn global add @cloudbase/cli
-  - cloudbase -v
+  - tcb -v
+  - tcb login --apiKeyId $id --apiKey $key
 
 install:
   - echo $REACT_APP_SRV_ADDR
