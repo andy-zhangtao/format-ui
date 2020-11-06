@@ -5,11 +5,9 @@ import clsx from 'clsx';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import { LinearProgress } from '@material-ui/core';
 import FormatClass from '../format';
+import HeaderCompoent from './header';
 
 const drawerWidth = 240;
 
@@ -63,6 +61,7 @@ const useStyles = makeStyles((theme: Theme) =>
                 duration: theme.transitions.duration.leavingScreen,
             }),
             marginLeft: -(drawerWidth / 4),
+            marginTop: 30,
         },
         contentShift: {
             transition: theme.transitions.create('margin', {
@@ -77,12 +76,12 @@ const useStyles = makeStyles((theme: Theme) =>
 const PersistentDrawerLeft = (props: any) => {
     const classes = useStyles();
     // const theme = useTheme();
-    const [open, setOpen] = React.useState(true);
+    const [open] = React.useState(true);
     const { route } = props;
 
-    const handleDrawerOpen = () => {
-        setOpen(true);
-    };
+    // const handleDrawerOpen = () => {
+    //     setOpen(true);
+    // };
 
     return (
         <div className={classes.root}>
@@ -95,7 +94,7 @@ const PersistentDrawerLeft = (props: any) => {
                     [classes.appBarShift]: open,
                 })}
             >
-                <Toolbar>
+                {/* <Toolbar>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -106,7 +105,8 @@ const PersistentDrawerLeft = (props: any) => {
                         <MenuIcon />
                     </IconButton>
                     <div className={classes.flexGrow} />
-                </Toolbar>
+                </Toolbar> */}
+                <HeaderCompoent />
             </AppBar>
             <main
                 className={clsx(classes.content, {
