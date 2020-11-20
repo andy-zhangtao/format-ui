@@ -17,4 +17,4 @@ script:
 
 after_success:
   - /tmp/ossutil64 --access-key-secret=$secret --access-key-id=$key --endpoint=$endpoint rm -rfs oss://$bucket
-  - /tmp/ossutil64 --access-key-secret=$secret --access-key-id=$key --endpoint=$endpoint cp -r build/ oss://$bucket/
+  - /tmp/ossutil64 --access-key-secret=$secret --access-key-id=$key --endpoint=$endpoint cp -r -f build/ oss://$bucket/
