@@ -4,12 +4,8 @@ node_js:
   - 14
 
 before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - export PATH="$HOME/.yarn/bin:$PATH"
-  - yarn -v
-  - yarn global add @cloudbase/cli
-  - tcb -v
-  - tcb login --apiKeyId $id --apiKey $key
+  - wget http://gosspublic.alicdn.com/ossutil/1.6.19/ossutil64 -O /tmp/ossutil64
+  - chmod 755 /tmp/ossutil64
 
 install:
   - echo $REACT_APP_SRV_ADDR
@@ -20,5 +16,5 @@ script:
   - echo "no need for unit test"
 
 after_success:
-  - tcb hosting delete cloudPath -e $envid
-  - tcb hosting deploy build -e $envid
+  - /tmp/ossutil64 --access-key-secret=$secret --access-key-id=$key --endpoint=$endpoint rm -rfs oss://$bucket
+  - /tmp/ossutil64 --access-key-secret=$secret --access-key-id=$key --endpoint=$endpoint cp -r build/ oss://$bucket/
