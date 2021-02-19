@@ -7,3 +7,8 @@ The nginx format tool web ui
 [https://nginx.devexp.cn/](https://nginx.devexp.cn/)
 
 ![](./doc/image/nginx-convert.gif)
+
+## Generate Kubernetes Yaml
+
+[https://nginx.devexp.cn/](https://nginx.devexp.cn/)
+![](./doc/image/kubernetes.gif)
