@@ -94,18 +94,6 @@ const PersistentDrawerLeft = (props: any) => {
                     [classes.appBarShift]: open,
                 })}
             >
-                {/* <Toolbar>
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        onClick={handleDrawerOpen}
-                        edge="start"
-                        className={clsx(classes.menuButton, open && classes.hide)}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <div className={classes.flexGrow} />
-                </Toolbar> */}
                 <HeaderCompoent />
             </AppBar>
             <main
@@ -118,7 +106,7 @@ const PersistentDrawerLeft = (props: any) => {
                         {renderRoutes(route.routes)}
                     </Suspense>
                 </main>
-                <FormatClass />
+                {/*<FormatClass />*/}
             </main>
         </div>
     );

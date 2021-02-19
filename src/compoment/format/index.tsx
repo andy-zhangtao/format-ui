@@ -43,7 +43,7 @@ class FormatComponent extends Component<FormatPros, FormatState>{
 
 
     render() {
-        console.log(this.props.loading)
+        // console.log(this.props.loading)
         const { loading, content } = this.props
         if (content) {
             this.state.showFormat = ''
